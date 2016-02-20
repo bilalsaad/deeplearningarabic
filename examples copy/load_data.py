@@ -76,9 +76,9 @@ def find_median_dim(setA,setB):
        
 #create-data() -> creates a pickle with our data [(Tr_x,Tr_y),(Te_x,Te_y)] 
 def create_data():
-    test_dir = u'/media/allCombined/test/*'
-    train_dir = u'/media/allCombined/train/*'
-    #median_dim = find_median_dim(train_dir,test_dir)
+    test_dir = u'~/allCombined/test/*'
+    train_dir = u'~/allCombined/train/*'
+    #n_dim = find_n_dim(train_dir,test_dir)
     median_dim=DEFAULT
     train_set = load_data(train_dir,median_dim)
     test_set = load_data(test_dir,median_dim)
