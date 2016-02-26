@@ -21,6 +21,7 @@ TEST_NUM=22218
 DIM=100*100
 
 (X_train, y_train), (X_test, y_test) =load_data.get_data()
+print(X_test)
 X_train=np.asarray(X_train)
 X_test=np.asarray(X_test)
 
@@ -39,10 +40,10 @@ Y_test = np_utils.to_categorical(y_test,nb_classes)
 
 model=Sequential()
 model.add(Dense(512,input_shape=(DIM,)))
-model.add(Activation('relu'))
+model.add(Activation('sigmoid'))
 model.add(Dropout(0.2))
 model.add(Dense(512))
-model.add(Activation('relu'))
+model.add(Activation('sigmoid'))
 model.add(Dropout(0.2))
 model.add(Dense(73))
 model.add(Activation('softmax'))
